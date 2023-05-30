@@ -27,20 +27,18 @@ struct ContentView: View {
         PatchData(name: "Brave", policyTargetVersion: "4.5.6", availableVersion: "7.8.9"),
         PatchData(name: "Vivaldi", policyTargetVersion: "10.2.1", availableVersion: "10.2.2"),
         PatchData(name: "Edge", policyTargetVersion: "65.4.3", availableVersion: "82.3.1")
-    ]
+    ] // Mock Data
     @State private var showAlert = false
 
     var body: some View {
         VStack {
             VStack {
                 TextField("Jamf Pro URL", text: $jamfUrl)
-                    .padding()
                 HStack{
                     TextField("Username", text: $jamfUser)
-                        .padding()
                     TextField("Password", text: $jamfPass)
-                        .padding()
                 }
+
                 Button(action: {
                     showAlert = true
                 }, label: {
@@ -57,15 +55,19 @@ struct ContentView: View {
                     Text("Invalid credentials provided")
                 })
                 .disabled(jamfUrl.isEmpty || jamfUser.isEmpty || jamfPass.isEmpty)
-                .padding()
             }
+
             Divider()
+
             Table(patchesPending, selection: $selectedPatches) {
                 TableColumn("Name", value: \.name)
-                TableColumn("Current Version", value: \.policyTargetVersion)
+                TableColumn("Current Target Version", value: \.policyTargetVersion)
                 TableColumn("Available Version", value: \.availableVersion)
-            }.scrollIndicators(.visible)
+            }
+            .scrollIndicators(.visible)
+
             Divider()
+
             Button(action: {
                 patchesPending = patchesPending.filter{
                     !selectedPatches.contains($0.id)
