@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20B726E12A8EA40200396D96 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 20B726E02A8EA40200396D96 /* KeychainAccess */; };
+		F5B0A08A2A3CE075002B4C74 /* PatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0A0892A3CE075002B4C74 /* PatchData.swift */; };
+		F5B0A08C2A3CEBEF002B4C74 /* PatchTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0A08B2A3CEBEF002B4C74 /* PatchTitle.swift */; };
+		F5B0A08E2A3CEEB5002B4C74 /* PatchDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0A08D2A3CEEB5002B4C74 /* PatchDefinition.swift */; };
+		F5B0A0912A3CEFB0002B4C74 /* PatchPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0A0902A3CEFB0002B4C74 /* PatchPolicy.swift */; };
+		F5B0A0932A3CF87A002B4C74 /* AuthToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B0A0922A3CF87A002B4C74 /* AuthToken.swift */; };
+		F5C1443E2A3B81C400F9C16A /* PatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C1443D2A3B81C400F9C16A /* PatchService.swift */; };
 		F5D773A12A2196B700DCDA8D /* PatchManApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D773A02A2196B700DCDA8D /* PatchManApp.swift */; };
 		F5D773A32A2196B700DCDA8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D773A22A2196B700DCDA8D /* ContentView.swift */; };
 		F5D773A52A2196B800DCDA8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D773A42A2196B800DCDA8D /* Assets.xcassets */; };
@@ -14,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F5B0A0892A3CE075002B4C74 /* PatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchData.swift; sourceTree = "<group>"; };
+		F5B0A08B2A3CEBEF002B4C74 /* PatchTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchTitle.swift; sourceTree = "<group>"; };
+		F5B0A08D2A3CEEB5002B4C74 /* PatchDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchDefinition.swift; sourceTree = "<group>"; };
+		F5B0A0902A3CEFB0002B4C74 /* PatchPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchPolicy.swift; sourceTree = "<group>"; };
+		F5B0A0922A3CF87A002B4C74 /* AuthToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthToken.swift; sourceTree = "<group>"; };
+		F5C1443D2A3B81C400F9C16A /* PatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchService.swift; sourceTree = "<group>"; };
 		F5D7739D2A2196B700DCDA8D /* PatchMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatchMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5D773A02A2196B700DCDA8D /* PatchManApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchManApp.swift; sourceTree = "<group>"; };
 		F5D773A22A2196B700DCDA8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,12 +40,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B726E12A8EA40200396D96 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F5B0A08F2A3CEF6F002B4C74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5B0A0892A3CE075002B4C74 /* PatchData.swift */,
+				F5B0A08B2A3CEBEF002B4C74 /* PatchTitle.swift */,
+				F5B0A08D2A3CEEB5002B4C74 /* PatchDefinition.swift */,
+				F5B0A0902A3CEFB0002B4C74 /* PatchPolicy.swift */,
+				F5B0A0922A3CF87A002B4C74 /* AuthToken.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F5D773942A2196B700DCDA8D = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				F5D773A02A2196B700DCDA8D /* PatchManApp.swift */,
+				F5B0A08F2A3CEF6F002B4C74 /* Model */,
+				F5C1443D2A3B81C400F9C16A /* PatchService.swift */,
 				F5D773A22A2196B700DCDA8D /* ContentView.swift */,
 				F5D773A42A2196B800DCDA8D /* Assets.xcassets */,
 				F5D773A92A2196B800DCDA8D /* PatchMan.entitlements */,
@@ -85,6 +113,9 @@
 			dependencies = (
 			);
 			name = PatchMan;
+			packageProductDependencies = (
+				20B726E02A8EA40200396D96 /* KeychainAccess */,
+			);
 			productName = PatchMan;
 			productReference = F5D7739D2A2196B700DCDA8D /* PatchMan.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +144,9 @@
 				Base,
 			);
 			mainGroup = F5D773942A2196B700DCDA8D;
+			packageReferences = (
+				20B726DF2A8EA40200396D96 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = F5D7739E2A2196B700DCDA8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +173,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B0A08A2A3CE075002B4C74 /* PatchData.swift in Sources */,
+				F5B0A0912A3CEFB0002B4C74 /* PatchPolicy.swift in Sources */,
 				F5D773A32A2196B700DCDA8D /* ContentView.swift in Sources */,
+				F5C1443E2A3B81C400F9C16A /* PatchService.swift in Sources */,
+				F5B0A08C2A3CEBEF002B4C74 /* PatchTitle.swift in Sources */,
+				F5B0A0932A3CF87A002B4C74 /* AuthToken.swift in Sources */,
 				F5D773A12A2196B700DCDA8D /* PatchManApp.swift in Sources */,
+				F5B0A08E2A3CEEB5002B4C74 /* PatchDefinition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +221,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -241,6 +282,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -265,13 +307,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = PatchMan/PatchMan.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PatchMan/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PatchMan;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -280,6 +326,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uwec.PatchMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -290,13 +339,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = PatchMan/PatchMan.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PatchMan/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = PatchMan;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +358,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.uwec.PatchMan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -332,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		20B726DF2A8EA40200396D96 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20B726E02A8EA40200396D96 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20B726DF2A8EA40200396D96 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5D773952A2196B700DCDA8D /* Project object */;
 }

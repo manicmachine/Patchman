@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct PatchManApp: App {
+    @StateObject private var patchService = PatchService()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(patchService)
         }
     }
 }
